@@ -61,15 +61,15 @@ namespace RockWeb.Blocks.Utility
         /// Raises the <see cref="E:System.Web.UI.Control.Init" /> event.
         /// </summary>
         /// <param name="e">An <see cref="T:System.EventArgs" /> object that contains the event data.</param>
-        protected override void OnInit( EventArgs e )
-        {
-            base.OnInit( e );
-            gList.GridRebind += gList_GridRebind;
+            protected override void OnInit( EventArgs e )
+            {
+                base.OnInit( e );
+                gList.GridRebind += gList_GridRebind;
 
-            // this event gets fired after block settings are updated. it's nice to repaint the screen if these settings would alter it
-            this.BlockUpdated += Block_BlockUpdated;
-            this.AddConfigurationUpdateTrigger( upnlContent );
-        }
+                // this event gets fired after block settings are updated. it's nice to repaint the screen if these settings would alter it
+                this.BlockUpdated += Block_BlockUpdated;
+                this.AddConfigurationUpdateTrigger( upnlContent );
+            }
 
         /// <summary>
         /// Raises the <see cref="E:System.Web.UI.Control.Load" /> event.
